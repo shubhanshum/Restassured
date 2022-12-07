@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite1]" parallel="none">
+  <test name="Nopackage(failed)" parallel="none">
+    <classes>
+      <class name="tests.OAuth2Test">
+        <methods>
+          <include name="oAuth2Test"/>
+        </methods>
+      </class> <!-- tests.OAuth2Test -->
+    </classes>
+  </test> <!-- Nopackage(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

@@ -1,0 +1,50 @@
+{
+   "national_id":"133112121666855",
+   "date_of_birth":"1989-07-15",
+   "date_of_expiry":"2020-06-03",
+   "customer_name":"Sushant Kumar",
+   "issuing_country_code":"ARE",
+   "nationality":"PAK",
+   "national_id_card_no":"089370811",
+   "national_id_successful_scan_count":"1",
+   "scanned_data":[
+      {
+         "resultState":3,
+         "successFrame":"",
+         "slaveRecognizerResult":{
+            "resultState":3,
+            "fullDocumentImage":"",
+            "mrzImage":null,
+            "mrzResult":{
+               "documentType":2,
+               "primaryId":"TAJ UD DIN",
+               "secondaryId":"MUHAMMAD AHSAN",
+               "issuer":"ARE",
+               "dateOfBirth":{
+                  "day":25,
+                  "month":2,
+                  "year":1988
+               },
+               "documentNumber":"089370811",
+               "nationality":"PAK",
+               "gender":"M",
+               "documentCode":"IL",
+               "dateOfExpiry":{
+                  "day":3,
+                  "month":6,
+                  "year":2020
+               },
+               "opt1":"784198868179767",
+               "opt2":"<<<<<<<<<<<",
+               "alienNumber":"",
+               "applicationReceiptNumber":"",
+               "immigrantCaseNumber":"",
+               "mrzText":"ILARE0893708115784198868179767\n8802255M2006039PAK<<<<<<<<<<<6\nTAJ<UD<DIN<<MUHAMMAD<AHSAN<<<<\n",
+               "mrzParsed":true,
+               "mrzVerified":true
+            }
+         },
+         "fullDocumentImage":""
+      }
+   ]
+}

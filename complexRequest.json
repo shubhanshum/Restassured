@@ -1,0 +1,20 @@
+{
+  "amount": 2,
+  "channel_id": 9,
+  "currency": "AED",
+  "txn_ref_id": "3RICF122AF3IPPZ7",
+  "user2_id": "REC_GULFBOX_ID",
+  "user2_name": "MERCHANT_NAME",
+  "campaign_txn_ref_id": "",
+  "meta": {
+    "txn_detl_meta": {
+      "product": "Du Recharge",
+      "recharge_type": "Du Prepaid Recharge",
+      "operator_id": 3,
+      "product_id": 24,
+      "service_id": 8,
+      "mobile": null,
+      "recharge_status": "PENDING"
+    }
+  }
+}
