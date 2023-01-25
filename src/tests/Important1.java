@@ -1,6 +1,9 @@
 package tests;
 
 import io.restassured.RestAssured;
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
@@ -8,20 +11,17 @@ public class Important1 {
 
 	public static void main(String[] args) {
 		
-		RequestSpecification request=RestAssured.given();
+		RequestSpecBuilder builder=new RequestSpecBuilder();
+		builder.setBaseUri("https://data.covid19india.org");
+		builder.setBasePath("v4/min");
 		
-		Response response=request.get("https://api.covidtracking.com/v1/us/daily.json");
-		System.out.println(response.then().log().body());
+		RequestSpecification request=builder.build();
 		
-		//get the size of all elements
-		int elementCount= response.jsonPath().getList("$").size();
-		//print 15th  element
-		System.out.println(response.body().jsonPath().getList("$").get(15).toString());
+		Response response=RestAssured.given(request).relaxedHTTPSValidation().contentType(ContentType.JSON).get("timeseries.min.json");
 		
+		JsonPath path=new JsonPath(response.asString());
 		
-		//print 15th reponse hospitalizedCurrently
-		System.out.println(response.jsonPath().get("hospitalizedCurrently[15]").toString());
-		
+		System.out.println(path.getString("AN.dates.2020-03-27.delta.confirmed"));
 	}
 
 }

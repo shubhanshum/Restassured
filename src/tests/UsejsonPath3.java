@@ -57,12 +57,14 @@ public class UsejsonPath3 {
 		RequestSpecBuilder builder=new RequestSpecBuilder();
 		builder.setBaseUri("https://api.rootnet.in");
 		builder.setBasePath("covid19-in");
+		builder.addHeader("Authorization", "Basic demo73836868383");
 		
 		RequestSpecification request=builder.build();
 		
 		Response response=RestAssured.given(request).relaxedHTTPSValidation().contentType(ContentType.JSON).get("stats/latest");
-		JsonPath path=new JsonPath(response.asString());
 		
+		
+		JsonPath path=new JsonPath(response.asString());
 		//Get the length of unofficial-summary array when there is a parent (in our case parent is data)
 		System.out.println("unofficial-summary array length is:"+path.getList("data.unofficial-summary").size());//1
 		
